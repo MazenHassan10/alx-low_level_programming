@@ -18,13 +18,14 @@ char *_strdup(char *str)
 	return (NULL);
 	}
 
-	size = _mysize(str);
-	ch = malloc(size * sizeof(char))
+	size = _mysize(*str)+1;
+	ch = malloc(size * sizeof(char));
 
 	i=0;
+
 	while (i < size)
 	{
-		if (str[i] == NULL)
+		if (str == NULL)
 		{
 			return (NULL);
 		}
@@ -40,7 +41,7 @@ char *_strdup(char *str)
  * @str : string type
  * Return: the size of the string
  */
-int _mysize(char *str)
+int _mysize(char str)
 {
 	int n;
 
