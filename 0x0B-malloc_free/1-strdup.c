@@ -41,7 +41,7 @@ char *_strdup(char *str)
  * @str : string type
  * Return: the size of the string
  */
-int _mysize(char str)
+int _mysize(char *str)
 {
 	int n;
 
