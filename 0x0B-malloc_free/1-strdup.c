@@ -13,13 +13,14 @@ char *_strdup(char *str)
 	int i = 0;
 	char *ch;
 
-	size = _mysize(str);
 	if (str == NULL)
 	{
-	return (0);
+	return (NULL);
 	}
-	else
-	{
+
+	size = _mysize(str);
+	ch = malloc(size * sizeof(char))
+
 	while (i < size)
 	{
 		if (str[i] == NULL)
@@ -29,21 +30,20 @@ char *_strdup(char *str)
 		ch[i] = str[i];
 		i++;
 	}
-	ch[size] = "/0";
+	ch[size] = "\0";
 
 	return (ch);
-	}
 }
 /**
  * _mysize - know the size of string
  * @str : string type
  * Return: the size of the string
  */
-int _mysize(char str)
+int _mysize(char *str)
 {
 	int n;
 
-	for (n = 0 ; str[n] != "/0" ; n++)
+	for (n = 0 ; str[n] != "\0" ; n++)
 	{
 
 	}
