@@ -15,37 +15,32 @@ char *str_concat(char *s1, char *s2)
 	int i;
 	char *s3;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL)
 	{
-		return (NULL);
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
 	}
 
 	sizo1 = sizeOne(s1);
 	sizo2 = sizeTwo(s2);
-	size = sizo1 + sizo2;
+	size = sizo1 + sizo2 + 1;
 	s3 = malloc(size * sizeof(char));
 	if (s3 == NULL)
 	{
 	return (NULL);
 	}
-
-	i = 0;
-	while (i < sizo1)
-	{
-	s3[i] = s1[i];
-	}
-	while (i < size)
-	{
-	s3[i] = s1[i - sizo1];
-	}
-	s3[size] = '\0';
+	_strncat(s3, s1, sizo1);
+	_strncat(s3, s2, sizo2);
 
 	return (s3);
 }
 /**
  * sizeOne - calculate the lenght
  * @s1 : string type
- * Return: return the length
+ * Return: return the lengthه
  */
 int sizeOne(char *s1)
 {
@@ -71,4 +66,21 @@ int sizeTwo(char *s2)
 
 	}
 	return (b);
+}
+/**
+ * _strncat - function to concatnate strings with n bytes
+ *
+ * @dest: destination for concatnation
+ * @src: source of string
+ * @n: int type for size of byte
+ * Return: dest
+ */
+char *_strncat(char *dest, char *src, int n)
+{
+	int dest_len, a;
+
+	dest_len = SizeOne(dest);
+	for (a = 0; a < n && src[a] != '\0'; a++)
+		dest[dest_len + a] = src[a];
+	return (dest);
 }
