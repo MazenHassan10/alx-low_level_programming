@@ -12,7 +12,6 @@ char *str_concat(char *s1, char *s2)
 	int size;
 	int sizo1;
 	int sizo2;
-	int i;
 	char *s3;
 
 	if (s1 == NULL)
@@ -79,7 +78,7 @@ char *_strncat(char *dest, char *src, int n)
 {
 	int dest_len, a;
 
-	dest_len = SizeOne(dest);
+	dest_len = sizeOne(dest);
 	for (a = 0; a < n && src[a] != '\0'; a++)
 		dest[dest_len + a] = src[a];
 	return (dest);
