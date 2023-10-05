@@ -51,7 +51,7 @@ int sizeOne(char *s1)
 {
 	int a;
 
-	for (a = 0; s2[a] != '\0'; a++)
+	for (a = 0; s1[a] != '\0'; a++)
 	{
 
 	}
@@ -66,7 +66,7 @@ int sizeTwo(char *s2)
 {
 	int b;
 
-	for (a = 0; s2[b] != '\0'; b++)
+	for (b = 0; s2[b] != '\0'; b++)
 	{
 
 	}
