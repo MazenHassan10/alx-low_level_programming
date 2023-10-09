@@ -31,10 +31,21 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (i = 0 ; s1[i] != '\0' ; i++)
 		new[i] = s1[i];
+	if (t <= n)
+	{
 	for (j = 0 ; s2[j] != '\0' ; j++)
 	{
 		new[i] = s2[j];
 		i++;
+	}
+	}
+	else
+	{
+	for (j = 0 ; j < n ; j++)
+	{
+		new[i] = s2[j];
+		i++;
+	}
 	}
 	new[i] = '\0';
 	return (new);
