@@ -6,6 +6,8 @@
  */
 int main(void)
 {
-	printf("%s", __FILE__);
+	char *filename = __FILE__;
+
+	printf("%c", filename);
 	return (0);
 }
