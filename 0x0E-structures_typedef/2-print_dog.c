@@ -8,8 +8,6 @@
  */
 void print_dog(struct dog *d)
 {
-	char so[] = "(nil)";
-
 	if (d != NULL)
 	{
 		if (d->name != NULL)
@@ -18,7 +16,7 @@ void print_dog(struct dog *d)
 		}
 		else
 		{
-			printf("Name: %s\n", so);
+			printf("Name: %s\n", "(nil)");
 		}
 			printf("Age: %f\n", d->age);
 		if (d->owner != NULL)
@@ -27,7 +25,7 @@ void print_dog(struct dog *d)
 		}
 		else
 		{
-			printf("Owner: %s", so);
+			printf("Owner: %s", "(nil)");
 		}
 	}
 }
