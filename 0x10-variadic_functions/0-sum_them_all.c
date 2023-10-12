@@ -1,11 +1,8 @@
 #include "variadic_functions.h"
-#include <stdio.h>
 #include <stdarg.h>
 /**
  * sum_them_all - sum inputed numbers
  * @n : number of inputs
- *
- * Description: sum of integers
  * Return: return the sum
  */
 int sum_them_all(const unsigned int n, ...)
