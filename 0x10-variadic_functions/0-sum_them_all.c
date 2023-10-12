@@ -4,7 +4,9 @@
 /**
  * sum_them_all - sum inputed numbers
  * @n : number of inputs
- * RETURNS: return the sum
+ *
+ * Description: sum of integers
+ * Return: return the sum
  */
 int sum_them_all(const unsigned int n, ...)
 {
