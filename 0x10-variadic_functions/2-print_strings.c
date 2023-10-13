@@ -30,7 +30,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				else
 				{
 	printf("%s", (str = va_arg(args, char *)) ? str : "(nil)");
-	printf("%s", separator ? separator : NULL);
+	printf("%s", separator ? separator : "");
 				}
 			}
 		va_end(args);
