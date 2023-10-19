@@ -5,8 +5,8 @@
 /**
  * print_list - print the whole list
  * @h : the list we gonna use
- * RETURN: the number of lists we have
-*/
+ * Return: the number of lists we have
+ */
 size_t print_list(const list_t *h)
 {
 	int i = 0;
