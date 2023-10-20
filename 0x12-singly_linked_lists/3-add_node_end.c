@@ -12,7 +12,9 @@ int strlength(const char *h)
 		int i = 0;
 
 		while (h[i] != '\0')
-			i++;
+		{
+		i++;
+		}
 		return (i);
 }
 /**
