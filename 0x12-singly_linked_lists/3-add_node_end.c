@@ -35,8 +35,13 @@ list_t *add_node_end(list_t **head, const char *str)
 		{
 			*head = p;
 			p->str = strdup(str);
-			p->len = strlength(str);
-			p->next = NULL;
+			if (p->str == NULL)
+			{
+				free(p);
+				return (NULL);
+			}
+				p->len = strlength(str);
+				p->next = NULL;
 			return (p);
 		}
 		list_t *last = *head;
@@ -46,6 +51,11 @@ list_t *add_node_end(list_t **head, const char *str)
 			last = last->next;
 		}
 		p->str = strdup(str);
+		if (p->str == NULL)
+		{
+			free(p);
+			return (NULL);
+		}
 		p->len = strlength(str);
 		last->next = p;
 		return (p);
