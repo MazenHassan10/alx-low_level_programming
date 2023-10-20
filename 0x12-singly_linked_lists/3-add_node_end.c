@@ -29,7 +29,13 @@ list_t *add_node_end(list_t **head, const char *str)
 
 		if (p == NULL)
 		{
-		return (NULL);
+			return (NULL);
+		}
+		if (*head == NULL)
+		{
+			*head = p;
+			p->next = NULL;
+			return (p);
 		}
 		list_t *last = *head;
 
