@@ -5,11 +5,12 @@
 /**
  * strlength - get the length of the string
  * @h : the actual length
- * Return: the length of the string 
+ * Return: the length of the string
  */
 int strlength(const char *h)
 {
 	int i = 0;
+
 	while (h[i] != '\0')
 		i++;
 	return (i);
