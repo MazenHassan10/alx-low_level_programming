@@ -9,9 +9,9 @@
  */
 void free_listint2(listint_t **head)
 {
-	listint_t *p = head, *NewP;
+	listint_t *p = *head, *NewP;
 
-	if (head == NULL)
+	if (*head == NULL)
 	{
 		return;
 	}
@@ -21,5 +21,5 @@ void free_listint2(listint_t **head)
 		free(p);
 		p = NewP;
 	}
-	*head = "(nil)";
+	*head = NULL;
 }
