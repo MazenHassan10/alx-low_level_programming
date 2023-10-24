@@ -9,15 +9,14 @@
  */
 int sum_listint(listint_t *head)
 {
+	int sum;
+	listint_t *p = head;
+
 	if (!head)
 	{
 		return (0);
 	}
-	int sum;
-	listint_t *p = head;
-
 	sum = 0;
-
 	while (p)
 	{
 		sum = sum + p->n;
