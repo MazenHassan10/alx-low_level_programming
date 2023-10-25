@@ -24,11 +24,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (NULL);
 	}
 	Node->n = n;
+	Node->next = NULL;
 	p = *head;
 	i = 0;
 	while (p)
 	{
-		if (idx == 0)
+		if (!idx)
 		{
 			Node->next = *head;
 			*head = Node;
