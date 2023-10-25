@@ -26,10 +26,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	Node->n = n;
 	p = *head;
-	i = 0;
+	i = (unsigned int)0;
 	while (p)
 	{
-		if (idx == 0)
+		if (idx == (unsigned int)0)
 		{
 			Node->next = *head;
 			*head = Node;
