@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  * fun - gets the power
- * k : our number
+ * @k : number of iterations
  * Return: power of the number
  */
 unsigned int fun(unsigned int k)
@@ -17,7 +17,7 @@ unsigned int fun(unsigned int k)
 }
 /**
  * binary_to_uint - print the binary number
- * b : our number
+ * @b : string the will be converted
  * Return: returns the unit
  */
 unsigned int binary_to_uint(const char *b)
